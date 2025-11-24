@@ -16,6 +16,7 @@ print(resultado)
 
 
 # Listas 
+print()
 tareas: list[str] = ["Estudiar Python", "Hacer la compra"]
 numeros: list[int] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -27,6 +28,7 @@ print(numeros[-5:9]) #no incluye el 5 por el -
 print(tareas)
 
 # Diccionarios
+print()
 puntuaciones: dict[str, int] = {
 "ana": 95,
 "luis": 88,
@@ -44,6 +46,7 @@ usuario: dict[str, str | int | bool] = {
 print(usuario["id"])
 
 #Condicionales
+print()
 edad: int = 25
 tiene_entrada: bool = True
 if edad < 18:
@@ -72,3 +75,13 @@ for alumno, nota in notas_alumnos.items():
         print(f"{alumno} ha aprobado con un {nota}.")
     else:
         print(f"{alumno} ha suspendido con un {nota}.")
+
+
+# Funciones
+print()
+def obtener_pi(numero: float = 3) -> float:
+    """Esta función calcula y devuelve el valor de Pi."""
+    return numero*3.14159
+print(obtener_pi())
+
+
