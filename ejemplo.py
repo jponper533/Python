@@ -1,4 +1,10 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
+from pydantic import BaseModel
+
+class elemento(BaseModel):
+    nombre: str
+    precio: int
 
 app = FastAPI()
 
@@ -25,3 +31,7 @@ def items(salto: int, limite: int = 10):
 def obtener_item(id_items : int): 
     return base_datos.get(id_items) 
     return base_datos[id_items] 
+
+@app.post("/items")
+def crear_items(item: elemento):
+    return item
