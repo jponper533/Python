@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
+
 from database import crear_tablas #poner funcion para crear la bd y la tabla
 
 
